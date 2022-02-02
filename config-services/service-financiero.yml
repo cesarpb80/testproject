@@ -1,0 +1,31 @@
+logging:
+  pattern:
+    console: '"%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"'
+server:
+  port: 8091
+spring:
+  application:
+    name: ws-producto
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:productosDB;DB_CLOSE_DELAY=-1
+    username: sa
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: 'update '
+    properties:
+      format-sql: false
+      show-sql: true
+      use-sql-comments: false
+    show-sql: true
+  sql:
+    init:
+      encoding: UTF-8
