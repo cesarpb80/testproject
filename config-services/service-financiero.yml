@@ -2,7 +2,7 @@ logging:
   pattern:
     console: '"%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"'
 server:
-  port: 8080
+  port: 8092
 spring:
   datasource:
     driverClassName: org.h2.Driver
