@@ -24,6 +24,3 @@ spring:
       show-sql: true
       use-sql-comments: false
     show-sql: true
-  sql:
-    init:
-      encoding: UTF-8
