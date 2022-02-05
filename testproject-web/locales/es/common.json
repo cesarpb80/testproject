@@ -1,6 +1,7 @@
 {
-    "menu_1": "Servicio",
-    "menu_1_1": "Registro",
-    "menu_2": "Cliente",
-    "menu_2_1": "Registro"
+    "menu_1": "Home",   
+    "menu_2": "Clientes",
+    "menu_2_1": "Registra Clientes",
+    "menu_3": "Productos",
+    "menu_3_1": "Registra Productos"
 }

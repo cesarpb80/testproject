@@ -1,9 +1,8 @@
 import Head from 'next/head'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './Header'
-import AppContext from '../components/common/AppContext'
 
-export default function Layout() {
+export default function Layout({children}) {
 
   const logIn = (e) => {
     e.preventDefault();
@@ -14,14 +13,13 @@ export default function Layout() {
 
   };
 
-  return (   
-    <AppContext.Provider value={{ authEnabled: process.env.NEXT_PUBLIC_AUTH_ENABLED }}>
+  return (    
       <div style={{ paddingTop: '4rem' }}>
         <Head>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Header logIn={logIn} logOut={logOut} authEnabled={process.env.NEXT_PUBLIC_AUTH_ENABLED} />        
-      </div>
-    </AppContext.Provider>
+        <Header logIn={logIn} logOut={logOut} />        
+        { children }
+      </div>   
   )
 }

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { slide as Menu } from 'react-burger-menu';
-import Link from 'next/link'
 import { getters } from '../store/app';
 import TreeMenu from 'react-simple-tree-menu';
 import '../node_modules/react-simple-tree-menu/dist/main.css';

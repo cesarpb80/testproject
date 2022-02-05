@@ -1,6 +1,7 @@
 {
-    "menu_1": "Servicio",
-    "menu_1_1": "Registro",
-    "menu_2": "Cliente",
-    "menu_2_1": "Registro"
+    "menu_1": "Home",   
+    "menu_2": "Customers",
+    "menu_2_1": "Add Customers",
+    "menu_3": "Products",
+    "menu_3_1": "Add Products"
 }

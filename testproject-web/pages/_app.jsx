@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Layout from '../layouts/Layout'
 import '../styles/globals.css'
-import { Provider as AuthProvider } from 'next-auth/client';
 
 function App({ Component, pageProps }) {  
   const { session } = pageProps;
@@ -10,15 +9,10 @@ function App({ Component, pageProps }) {
    
   }, []);
     
-  return (
-    <AuthProvider session={session}
-      options={{
-        site: process.env.NEXT_PUBLIC_NEXTAUTH_URL
-      }}>
+  return (  
       <Layout>
         <Component {...pageProps} />
-      </Layout>
-    </AuthProvider >   
+      </Layout>   
   )
 }
 

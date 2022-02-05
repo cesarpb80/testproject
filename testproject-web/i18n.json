@@ -5,6 +5,7 @@
         "/": ["home"],
         "*": ["common"],
         "/cliente": ["cliente"],
-        "/servicio": ["servicio"]
+        "/servicio": ["servicio"],
+        "/producto": ["producto"]
     }
 }
