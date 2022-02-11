@@ -1,0 +1,9 @@
+version: '3.0'
+services:
+  testproject-gateway:
+    image: testproject-gateway
+    container_name: testproject-gateway
+    hostname: testproject-gateway
+    ports:
+     - "9090:9090"
+     - "8792:8792"
