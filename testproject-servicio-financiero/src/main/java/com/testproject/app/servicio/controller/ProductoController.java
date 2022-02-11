@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,7 +28,8 @@ import com.testproject.app.servicio.service.ProductoService;
 import com.testproject.app.servicio.util.FormatErrorException;
 
 @RestController
-@RequestMapping(path = "productos")
+@RequestMapping(path = "/productos")
+@CrossOrigin(origins = "*")
 public class ProductoController {
 	
 	@Autowired
@@ -63,12 +65,25 @@ public class ProductoController {
 		return new ResponseEntity<List<Producto>>(productos, HttpStatus.OK); // return ResponseEntity.ok(productos); Es lo mismo que		
 	}
 	
-	@PostMapping()
+	@GetMapping(path = "/productosbycondicion")
+	public ResponseEntity<List<Producto>> getProductosByCondicion(@RequestParam(name = "edad", required = true) int edad,
+			@RequestParam(name = "residencia", required = true) int residencia, @RequestParam(name = "ingreso", required = true) double ingreso) {
+		List<Producto> productos = productoService.findByCondicion(edad, residencia, ingreso);
+		
+		if(productos.isEmpty()) {
+			return ResponseEntity.notFound().build();
+		} else {
+			return ResponseEntity.ok(productos);
+		}
+		
+	}
+	
+	@PostMapping(consumes = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
 	public ResponseEntity<Producto> insertProducto(@Valid @RequestBody Producto producto, BindingResult result) {
 		
 		if(result.hasErrors()) {
 			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, FormatErrorException.formatMessage(result));
-		}
+		}		
 		
 		Producto productoNew = productoService.insertProducto(producto);
 		if(productoNew == null) {

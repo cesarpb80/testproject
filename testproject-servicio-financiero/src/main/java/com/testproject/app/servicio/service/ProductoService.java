@@ -13,5 +13,6 @@ public interface ProductoService {
 	public Producto updateProducto(Producto producto);
 	public Producto deleteProducto(Long productoId);
 	public List<Producto> findByCategoria(Categoria categoria);	
+	public List<Producto> findByCondicion(int edad, int residencia, double ingreso);
 
 }

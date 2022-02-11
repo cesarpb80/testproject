@@ -30,7 +30,15 @@ public class ProductoServiceImpl implements ProductoService {
 
 	@Override
 	public Producto insertProducto(Producto producto) {
-		producto.setFechaRegistro(new Date());		
+		Producto productoExists = getProducto(producto.getProductoId());
+		
+		if(productoExists == null) {
+			producto.setFechaRegistro(new Date());
+			productoRepository.save(producto);
+		} else {
+			producto = productoExists;
+		}
+				
 		return productoRepository.save(producto);
 	}
 	
@@ -62,6 +70,11 @@ public class ProductoServiceImpl implements ProductoService {
 	@Override
 	public List<Producto> findByCategoria(Categoria categoria) {
 		return productoRepository.findByCategoria(categoria);
+	}
+
+	@Override
+	public List<Producto> findByCondicion(int edad, int residencia, double ingreso) {				
+		return productoRepository.findByCondicion(edad, residencia, ingreso);
 	}
 
 }

@@ -1,0 +1,20 @@
+FROM openjdk:18-jdk-alpine3.14
+MAINTAINER César Pérez<cesarpb80@gmail.com>
+
+RUN apk update
+RUN apk add --update netcat-openbsd && rm -rf /var/cache/apk/*
+RUN apk add --no-cache cifs-utils
+RUN mkdir -p /app/
+COPY target/*.jar /app.jar
+RUN echo "/bin/sh -c " > entrypoint.sh
+RUN echo "java \$API_JAVA_OPTION -jar /app.jar" >> entrypoint.sh
+RUN adduser -s /bin/true -u 1000 -D -h /app app \
+  && chown -R app /app \
+  && chmod 700 /app \
+  && chown -R app /app.jar \
+  && chmod 700 /app.jar \
+  && chmod 755 entrypoint.sh
+USER app
+RUN cat entrypoint.sh
+EXPOSE 8091 8790
+CMD /bin/sh ./entrypoint.sh
