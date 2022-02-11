@@ -100,11 +100,11 @@ const Productos = () => {
                 }                
                 setDataCatalogs(dataCatalogs);
             } 
-
+            //debugger
             if(data.dataProductos) {                
                 data.dataProductos.map(item => {                    
                     item.Update = <Producto key={item.productoId} item={ item } data={ data.dataProductos } loadData ={ loadData } dataCatalogs= {dataCatalogs}  ></Producto>
-                    //item.Delete = <Button onClick={(e) => deleteItem(e, item.productoId)} variant="danger">{t('common:btnDelete')}</Button> 
+                    item.Delete = <Button onClick={(e) => deleteItem(e, item.productoId)} variant="danger">{t('common:btnDelete')}</Button> 
                 });                 
             }            
             setProductos(data.dataProductos ? data.dataProductos : dataProductos);
@@ -130,6 +130,7 @@ const Productos = () => {
                         </Col>
                     </Row>
                     <br></br>
+                    {/* <h1>Hola mumundo</h1> */}
                     <Row>
                         <Col>
                         </Col>
@@ -140,7 +141,7 @@ const Productos = () => {
                     <br></br>  
                     <Row>
                         <Col>
-                            <DataGrid data={productos} schemaColumns="productos" hiddenColumns={ ["productoId", "fechaRegistro", "categoriaId", "Delete"] } />
+                            <DataGrid data={productos} schemaColumns="productos" hiddenColumns={ ["productoId", "fechaRegistro", "categoriaId"] } />
                         </Col>
                     </Row>                   
                 </Form>
