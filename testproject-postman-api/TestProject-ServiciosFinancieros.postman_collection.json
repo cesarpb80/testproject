@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "b45dd59a-99ee-4532-9c41-932695726e3b",
+		"name": "TestProject-ServiciosFinancieros",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "producto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/productos/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"productos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "producto Eureka",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://host.docker.internal:8091/productos/2",
+					"protocol": "http",
+					"host": [
+						"host",
+						"docker",
+						"internal"
+					],
+					"port": "8091",
+					"path": [
+						"productos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "producto Gateway",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://host.docker.internal:9090/servicio-ws/productos/2",
+					"protocol": "http",
+					"host": [
+						"host",
+						"docker",
+						"internal"
+					],
+					"port": "9090",
+					"path": [
+						"servicio-ws",
+						"productos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categorias",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/categorias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "productosByCondicion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/productos?edad=15&residencia=1&ingreso=2000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"productos"
+					],
+					"query": [
+						{
+							"key": "edad",
+							"value": "15"
+						},
+						{
+							"key": "residencia",
+							"value": "1"
+						},
+						{
+							"key": "ingreso",
+							"value": "2000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insertProducto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo\": \"dede\",\r\n    \"nombre\": \"de\",\r\n    \"categoria\": {\r\n        \"categoriaId\": 3,\r\n        \"nombre\": \"Financiación\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8091/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProducto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productoId\": 7,\r\n    \"codigo\": \"0007\",\r\n    \"nombre\": \"Prestamo Personal\",\r\n    \"fechaRegistro\": \"2021-01-31T05:00:00.000+00:00\",\r\n    \"categoria\": {\r\n        \"categoriaId\": 3,\r\n        \"nombre\": \"Financiación\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8091/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProducto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/productos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"productos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "config-services",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://root:p4sw0rd@localhost:8089/service-financiero/default",
+					"protocol": "http",
+					"auth": {
+						"user": "root",
+						"password": "p4sw0rd"
+					},
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"service-financiero",
+						"default"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "config-services Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/service-financiero/default",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"service-financiero",
+						"default"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "servicios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"servicioId\": 3,\r\n        \"clienteId\": 3,\r\n        \"fechaRegistro\": \"2022-02-10T05:00:00.000+00:00\",\r\n        \"producto\": {\r\n            \"productoId\": 4,\r\n            \"codigo\": \"0004\",\r\n            \"nombre\": \"Seguro\",\r\n            \"fechaRegistro\": \"2021-01-31T05:00:00.000+00:00\",\r\n            \"categoria\": {\r\n                \"categoriaId\": 4,\r\n                \"nombre\": \"Otros\"\r\n            }\r\n        },\r\n        \"aplicado\": true\r\n    },\r\n    {\r\n        \"servicioId\": 4,\r\n        \"clienteId\": 3,\r\n        \"fechaRegistro\": \"2022-02-10T05:00:00.000+00:00\",\r\n        \"producto\": {\r\n            \"productoId\": 5,\r\n            \"codigo\": \"0005\",\r\n            \"nombre\": \"Inversiones\",\r\n            \"fechaRegistro\": \"2021-01-31T05:00:00.000+00:00\",\r\n            \"categoria\": {\r\n                \"categoriaId\": 2,\r\n                \"nombre\": \"Inversión\"\r\n            }\r\n        },\r\n        \"aplicado\": false\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8091/servicios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"servicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "servicios Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/servicios/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"servicios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
