@@ -1,6 +1,7 @@
 package com.testproject.app.cliente.service.impl;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,9 @@ public class ClienteServiceImpl implements ClienteService {
 	
 	@Autowired
 	private ClienteRepository clienteRepository;
+	
+	
+	public static final Logger LOGGER = Logger.getLogger(ClienteServiceImpl.class.getName());;
 
 	@Override
 	public List<Cliente> getClientes() {	
@@ -21,7 +25,8 @@ public class ClienteServiceImpl implements ClienteService {
 	}
 
 	@Override
-	public Cliente getCliente(Long id) {		
+	public Cliente getCliente(Long id) {	
+		LOGGER.info("getCliente: " + id);		
 		return clienteRepository.findById(id).orElse(null);
 	}
 
@@ -49,6 +54,8 @@ public class ClienteServiceImpl implements ClienteService {
 			clienteUpdate.setApellidoMaterno(cliente.getApellidoMaterno());
 			clienteUpdate.setSexo(cliente.getSexo());
 			clienteUpdate.setFechaNacimiento(cliente.getFechaNacimiento());
+			clienteUpdate.setIngreso(cliente.getIngreso());
+			clienteUpdate.setPais(cliente.getPais());
 			clienteUpdate.setDireccion(cliente.getDireccion());
 		} else {
 			return null;

@@ -1,0 +1,9 @@
+version: '3.0'
+services:
+  testproject-client:
+    image: testproject-client
+    container_name: testproject-client
+    hostname: testproject-client
+    ports:
+     - "8092:8092"
+     - "8789:8789"
