@@ -1,0 +1,9 @@
+version: '3.0'
+services:
+  testproject-discovery:
+    image: testproject-discovery
+    container_name: testproject-discovery
+    hostname: testproject-discovery
+    ports:
+     - "8761:8761"
+     - "8791:8791"
