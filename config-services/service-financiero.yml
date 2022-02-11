@@ -2,8 +2,10 @@ logging:
   pattern:
     console: '"%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"'
 server:
-  port: 8080
+  port: 8091
 spring:
+  application:
+    name: servicio-financiero
   datasource:
     driverClassName: org.h2.Driver
     url: jdbc:h2:mem:productosDB;DB_CLOSE_DELAY=-1
@@ -24,3 +26,17 @@ spring:
       show-sql: true
       use-sql-comments: false
     show-sql: true
+    
+----->
+
+spring:
+  application:
+    name: service-financiero
+  cloud:
+    config:
+      password: p4sw0rd
+      uri: http://localhost:8888
+      username: root
+      
+      
+https://github.com/cesarpb80/testproject.git/file:C:\\Users\\CSAR~1\\AppData\\Local\\Temp\\config-repo-17926719286414727736\\config-services\\service-financiero.yml      
