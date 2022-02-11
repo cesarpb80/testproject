@@ -1,0 +1,21 @@
+{
+    "title":"Customers",
+    "frmTitle": "Customer",
+    "cedula": "Identification",
+    "paisId": "Pais",
+    "apellidoPaterno": "First LastName",
+    "apellidoMaterno": "Second LastName",
+    "sexo": "Orientation",
+    "fechaNacimiento": "Birthday",
+    "ingreso": "Income",
+    "direccion":"Address",
+    "nombre": "Name",
+    "pais": "Country",
+    "Update": "Update",
+    "Delete": "Delete",
+    "alertTitle": "[OPERATION] of Customer",
+    "alertText": "Customer have been [OPERATION]",
+    "valMin": "Minimum Income [VALUE]",    
+    "valPais": "You must select an Country",
+    "valIngreso": "[field] must be numeric value"
+}

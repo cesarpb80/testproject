@@ -4,7 +4,7 @@ export const getters = {
       {
         key: 1,
         label: 'menu_1',
-        url: '/servicio',
+        url: '/servicios',
         nodes:[]
       },   
       {
@@ -15,7 +15,7 @@ export const getters = {
             key: 1,
             label: 'menu_2_1',
             nodes: [],
-            url: "/cliente"
+            url: "/clientes"
           }
         ]
       },
@@ -27,7 +27,7 @@ export const getters = {
             key: 1,
             label: 'menu_3_1',
             nodes: [],
-            url: "/producto"
+            url: "/productos"
           }
         ]
       }       

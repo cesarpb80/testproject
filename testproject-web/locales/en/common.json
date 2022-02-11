@@ -1,7 +1,25 @@
 {
+    "btnInsert": "To register",
+    "btnUpdate": "Update",
+    "btnDelete": "Delete",
+    "btnCancel": "Cancel",
+    "btnSave": "Save",
+    "btnAdd": "Add",
+    "btnEdit": "Edit",
+    "btnView": "View",
+    "search": "Search",
     "menu_1": "Home",   
     "menu_2": "Customers",
     "menu_2_1": "Add Customers",
     "menu_3": "Products",
-    "menu_3_1": "Add Products"
+    "menu_3_1": "Add Products",
+    "valRequiredField": "[field] is required",
+    "alertConfirmTitle":"Do you want to delete the record?",
+    "alertConfirmText":"You will not be able to reverse this!",
+    "msgInsertedTitle": "Registry",
+    "msgInsertedText": "registered",
+    "msgUpdatedTitle": "Update",
+    "msgUpdatedText": "updated",
+    "msgDeletedTitle": "Information deletion",
+    "msgDeletedText": "Record removed"
 }

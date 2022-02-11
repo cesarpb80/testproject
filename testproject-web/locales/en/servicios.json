@@ -1,0 +1,22 @@
+{
+    "title": "Banking Services",
+    "infCliente": "Customer information",
+    "servicios":"Summary of Services",
+    "nombre": "Client Name",
+    "cedula": "Identification",
+    "apellidoPaterno": "First LastName",
+    "apellidoMaterno": "Second LastName",
+    "sexo": "Orientation",
+    "fechaNacimiento": "Birthday",
+    "ingreso": "Income",
+    "pais": "Country",
+    "servicioId": "servicioId",
+    "clienteId": "clienteId",
+    "productoId": "productoId",
+    "codigoProducto": "Code",
+    "nombreProducto": "Product",
+    "aplicado": "Applyied",
+    "aplicar": "Applyied",
+    "alertTitle": "[OPERATION] of Services",
+    "alertText": "Services have been [OPERATION]"    
+}

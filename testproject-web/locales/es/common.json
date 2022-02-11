@@ -1,7 +1,25 @@
 {
+    "btnInsert": "Registrar",
+    "btnUpdate": "Actualizar",
+    "btnDelete": "Eliminar",
+    "btnCancel": "Cancelar",
+    "btnSave": "Guardar",
+    "btnAdd": "Agregar",
+    "btnEdit": "Editar",
+    "btnView": "Ver",
+    "search": "Buscar",
     "menu_1": "Home",   
     "menu_2": "Clientes",
     "menu_2_1": "Registra Clientes",
     "menu_3": "Productos",
-    "menu_3_1": "Registra Productos"
+    "menu_3_1": "Registra Productos",
+    "valRequiredField": "[field] es requerido",
+    "alertConfirmTitle":"Desea eliminar el registro?",
+    "alertConfirmText":"¡No podrás revertir esto!",
+    "msgInsertedTitle": "Registro",
+    "msgInsertedText": "registrado",
+    "msgUpdatedTitle": "Actualización",
+    "msgUpdatedText": "actualizado",
+    "msgDeletedTitle": "Eliminación de información",
+    "msgDeletedText": "Registro eliminado"
 }

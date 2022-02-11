@@ -1,0 +1,22 @@
+{
+    "title": "Servicios Bancarios",
+    "infCliente": "Información del Cliente",
+    "servicios":"Resumen de Servicios",
+    "nombre": "Nombre del Cliente",
+    "cedula": "Cedula",    
+    "apellidoPaterno": "Apellido Paterno",
+    "apellidoMaterno": "Apellido Materno",
+    "sexo": "Sexo",
+    "fechaNacimiento": "Fecha Nacimiento",
+    "ingreso": "Ingreso",
+    "pais": "Residencia",
+    "servicioId": "servicioId",
+    "clienteId": "clienteId",
+    "productoId": "productoId",
+    "codigoProducto": "Codigo",
+    "nombreProducto": "Producto",
+    "aplicado": "Aplicado",
+    "aplicar" : "Aplicado",
+    "alertTitle": "[OPERATION] de servicios",
+    "alertText": "Se han [OPERATION] los servicios exitosamente"
+}

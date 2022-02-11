@@ -4,8 +4,8 @@
     "pages" : {
         "/": ["home"],
         "*": ["common"],
-        "/cliente": ["cliente"],
-        "/servicio": ["servicio"],
-        "/producto": ["producto"]
+        "/clientes": ["clientes"],
+        "/servicios": ["servicios"],
+        "/productos": ["productos"]
     }
 }

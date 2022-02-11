@@ -1,0 +1,15 @@
+{
+    "title":"Banking Products",   
+    "productoId": "productoId",
+    "fechaRegistro": "Registration Date",
+    "categoriaId":"Category", 
+    "categoria": "Category",
+    "valCategoria": "You must select an Category",
+    "codigo": "Code",
+    "nombre": "Product",
+    "Update": "Update",
+    "Delete": "Delete",
+    "alertTitle": "[OPERATION] of Product",
+    "alertText": "Prodcut have been [OPERATION]",
+    "descripcion": "Product"
+}

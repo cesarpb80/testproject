@@ -1,0 +1,15 @@
+{
+    "title":"Productos Bancarios",
+    "productoId": "productoId",
+    "fechaRegistro": "Fecha Registro",
+    "categoriaId":"Categoria",
+    "categoria": "Categoria",
+    "valCategoria":"Debes seleccionar una Categoría",
+    "codigo": "Codigo",
+    "nombre": "Producto",
+    "Update": "Editar",
+    "Delete": "Eliminar",
+    "alertTitle": "[OPERATION] de Producto",
+    "alertText": "Se a [OPERATION] el Producto exitosamente",
+    "descripcion": "Producto"
+}

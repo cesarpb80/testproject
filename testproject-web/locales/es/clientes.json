@@ -1,0 +1,22 @@
+{
+    "title":"Clientes",
+    "frmTitle": "Cliente",
+    "clienteId": "clienteId",
+    "paisId": "Pais",
+    "cedula": "Cedula",
+    "apellidoPaterno": "Apellido Paterno",
+    "apellidoMaterno": "Apellido Materno",
+    "sexo": "Sexo",
+    "fechaNacimiento": "Fecha Nacimiento",
+    "ingreso": "Ingreso",
+    "direccion":"Dirección",
+    "nombre": "Nombre",
+    "pais": "País",
+    "Update": "Editar",
+    "Delete": "Eliminar",
+    "alertTitle": "[OPERATION] de Cliente",
+    "alertText": "Se a [OPERATION] el Cliente exitosamente",
+    "valMin": "Ingreso Minimo [VALUE]",
+    "valPais": "Debes seleccionar un Pais",
+    "valIngreso": "[field] debe ser un valor numerico"
+}
